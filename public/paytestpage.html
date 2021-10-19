@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body style="margin:0;">
+
+  <!-- <div id="loader"></div>
+
+  <form method="POST" action="https://api.razorpay.com/v1/checkout/embedded" id="formdata" style="display: none;">
+
+  </form> -->
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+
+  <button id="rzp-button1" hidden>Pay</button>
+
+
+
+
+
+
+  <script>
+
+    function parseURLParams(url) {
+      var queryStart = url.indexOf("?") + 1,
+        queryEnd = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.split("&"),
+        parms = {}, i, n, v, nv;
+
+      if (query === url || query === "") return;
+
+      for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = nv[1];
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+      }
+      return parms;
+
+    }
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      url = parseURLParams(window.location.href);
+      //     formid = document.getElementById("formdata");//rzp_test_j5jCrnROUNJlnS
+      //     formid.innerHTML = `<input type="hidden" name="key_id" value="rzp_test_j5jCrnROUNJlnS">
+      //   <input type="hidden" name="order_id" value="${url.order_id}">
+      //   <input type="hidden" name="name" value="ROBIGO">
+      //   <input type="hidden" name="description" value="">
+      //   <input type="hidden" name="image" value="https://firebasestorage.googleapis.com/v0/b/robigo.appspot.com/o/Mask%20Group%20(3).png?alt=media">
+      //   <input type="hidden" name="prefill[name]" value="${url.name}">
+      //   <input type="hidden" name="prefill[contact]" value="${url.contact}">
+      //   <input type="hidden" name="prefill[email]" value="${url.email}">
+      //   <input type="hidden" name="notes[shipping address]" value="L-16, The Business Centre, 61 Wellfield Road, New Delhi - 110001">
+      //   <input type="hidden" name="callback_url" value="https://us-central1-videochat-c2155.cloudfunctions.net/paymentcomplete?callback_url=true&order_id=${url.order_id}">
+      // <input type="hidden" name="cancel_url" value="https://us-central1-videochat-c2155.cloudfunctions.net/paymentcomplete?callback_url=false&order_id=${url.order_id}">
+      //   <button style>Submit</button>`
+
+      let options = {
+        "key": "rzp_test_Z6gylfiYBWDync", // Enter the Key ID generated from the Dashboard
+        "name": "DeliveryApp",
+        "description": "",
+        "image": "https://firebasestorage.googleapis.com/v0/b/robigo.appspot.com/o/Mask%20Group%20(3).png?alt=media",
+        "order_id": `${url.order_id}`, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        "callback_url": `https://us-central1-deliverydebug.cloudfunctions.net/Payment/Complete?callback_url=true&order_id=${url.order_id}`,
+        "cancel_url": `https://us-central1-deliverydebug.cloudfunctions.net/Payment/Complete?callback_url=false&order_id=${url.order_id}`,
+        "redirect": true,
+        "prefill": {
+          "name": `${url.name}`,
+          "email": `${url.email}`,
+          "contact": `${url.contact}`
+        },
+        "notes": {
+          "address": "L-16, The Business Centre, 61 Wellfield Road, New Delhi - 110001"
+        },
+        "theme": {
+          "color": "#3399cc"
+        },
+        "modal": {
+          "ondismiss": function () {
+            invokeCSharpAction("fail");
+          }
+        }
+      };
+      console.log(options);
+      pay(options);
+
+
+      // formid.submit();
+
+
+    })
+
+
+    function pay(options) {
+      let rzp1 = new Razorpay(options);
+      document.getElementById('rzp-button1').onclick = function (e) {
+        rzp1.open();
+        e.preventDefault();
+      }
+      document.getElementById('rzp-button1').click();
+    }
+
+  </script>
+</body>
+
+</html>

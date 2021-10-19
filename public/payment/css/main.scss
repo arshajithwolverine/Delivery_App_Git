@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 20px;
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            // background: red;
+            img{
+                width: 30%;
+                height: auto;
+        }
+        
+    }
+    .success{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px 10px;
+        padding: 20px 20px;
+        // border: 1px solid #6cc070;
+        border-radius: 10px;
+        background-color: rgba($color: #6cc070, $alpha: 0.1);
+        .icon{
+            margin-top: 50px;
+            width: 20%;
+            height: auto;
+        }
+        .text{
+            text-align: center;
+            color: rgba($color: #6cc070, $alpha: 1.0);
+            h4{
+                margin: 10px;
+                margin-top: 20px;
+            }
+            p{
+                font-size: 0.7rem;
+                margin: 2px;
+                opacity: 0.6;
+            }
+        }
+        .button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(26, 180, 251,);
+            margin-top: 30px;
+            width: 50%;
+            border-radius: 100px;
+            padding: 0px 15px;
+            color: white;
+            font-weight: 500;
+            .ico{
+                margin-right: 10px;
+                width: 10%;
+                height: auto;
+            }
+
+        }
+    }
+    .failure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px 10px;
+        padding: 20px 20px;
+        // border: 1px solid #6cc070;
+        border-radius: 10px;
+        background-color: rgba($color: #ff6633, $alpha: 0.1);
+        .icon{
+            margin-top: 50px;
+            width: 20%;
+            height: auto;
+        }
+        .text{
+            text-align: center;
+            color: rgba($color: #ff6633, $alpha: 1.0);
+            h4{
+                margin: 10px;
+                margin-top: 20px;
+            }
+            p{
+                font-size: 0.7rem;
+                margin: 2px;
+                opacity: 0.6;
+            }
+        }
+        .button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(26, 180, 251,);
+            margin-top: 30px;
+            width: 50%;
+            border-radius: 100px;
+            padding: 0px 15px;
+            color: white;
+            font-weight: 500;
+            .ico{
+                margin-right: 10px;
+                width: 10%;
+                height: auto;
+            }
+
+        }
+    }
+}
+}

@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto',sans-serif;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 20px;
+}
+
+.main .container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.main .container .logo img {
+  width: 30%;
+  height: auto;
+}
+
+.main .container .success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 10px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: rgba(108, 192, 112, 0.1);
+}
+
+.main .container .success .icon {
+  margin-top: 50px;
+  width: 20%;
+  height: auto;
+}
+
+.main .container .success .text {
+  text-align: center;
+  color: #6cc070;
+}
+
+.main .container .success .text h4 {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.main .container .success .text p {
+  font-size: 0.7rem;
+  margin: 2px;
+  opacity: 0.6;
+}
+
+.main .container .success .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1ab4fb;
+  margin-top: 30px;
+  width: 50%;
+  border-radius: 100px;
+  padding: 0px 15px;
+  color: white;
+  font-weight: 500;
+}
+
+.main .container .success .button .ico {
+  margin-right: 10px;
+  width: 10%;
+  height: auto;
+}
+
+.main .container .failure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 10px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 102, 51, 0.1);
+}
+
+.main .container .failure .icon {
+  margin-top: 50px;
+  width: 20%;
+  height: auto;
+}
+
+.main .container .failure .text {
+  text-align: center;
+  color: #ff6633;
+}
+
+.main .container .failure .text h4 {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.main .container .failure .text p {
+  font-size: 0.7rem;
+  margin: 2px;
+  opacity: 0.6;
+}
+
+.main .container .failure .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1ab4fb;
+  margin-top: 30px;
+  width: 50%;
+  border-radius: 100px;
+  padding: 0px 15px;
+  color: white;
+  font-weight: 500;
+}
+
+.main .container .failure .button .ico {
+  margin-right: 10px;
+  width: 10%;
+  height: auto;
+}
+/*# sourceMappingURL=main.css.map */
